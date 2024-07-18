@@ -15,7 +15,7 @@ function Buynow(props){
                         <div style={{fontWeight:'bold', fontSize:'17px'}}>Items</div><div>{props.size}</div>
                     </div>
                     <br/> 
-                    <div className='pay'> Pay</div>
+                    <div className='pay'> Pay </div>
                     <br/>
                 </div>
                 
