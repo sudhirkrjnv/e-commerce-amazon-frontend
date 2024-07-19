@@ -40,9 +40,9 @@ function Product(){
                 console.log("error "+ error.message);
             }
         };
-        getproducts();
+        //getproducts();
 
-        //setlistofitem(items);
+        setlistofitem(items);
 
     },[]);
             

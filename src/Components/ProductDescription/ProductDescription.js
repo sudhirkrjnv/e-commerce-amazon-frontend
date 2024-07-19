@@ -11,10 +11,14 @@ import axios from 'axios';
 function ProductDescription(){
 
 
-    const {item, size, increment} = useContext(CartContext);
+    const {item, size, increment, decrement} = useContext(CartContext);
     const addToCart= function(){
         //console.log('addtocart is clicked')
         increment(itemdetails);
+    }
+    const removeFromCart= function(){
+        //console.log('addtocart is clicked')
+        decrement(itemdetails);
     }
 
     let { id } = useParams();
@@ -37,7 +41,7 @@ function ProductDescription(){
     const [itemdetails, setitemdetails]= useState([]);
 
     useEffect(()=>{
-        const getindividualproduct = async () => {
+        /*const getindividualproduct = async () => {
             try {
                 const response = await axios.get('http://localhost:8085/getproductsone/'+ id);
                 setitemdetails(response.data);
@@ -45,12 +49,12 @@ function ProductDescription(){
                 console.log("error "+ error.message);
             }
         };
-        getindividualproduct();
-        /*
+        getindividualproduct();*/
+        
         let item = items.filter( (item) =>{
             if(item.id==id) return item;
         })
-        setitemdetails(item[0]);*/
+        setitemdetails(item[0]);
     },[id]);
 
     return(

@@ -2,7 +2,6 @@ import './Cartitems.css'
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 
-
 function Cartitems(props){
     
     return(
@@ -35,6 +34,11 @@ function Cartitems(props){
                     </div><br/>
                     <div className='availability'>{props.availibility}</div>
                     <div className='soldby'>Soldby : <b>Amazon</b></div>
+                    <div className='itemnumber'>
+                        <button className='minus' onClick={props.minus}> - </button>
+                        <button className='totitem'> {props.size} </button>
+                        <button className='plus' onClick={props.plus}> + </button>
+                    </div>
                 </div>
             </div>
         </div>
