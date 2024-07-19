@@ -36,7 +36,7 @@ function Cartitems(props){
                     <div className='soldby'>Soldby : <b>Amazon</b></div>
                     <div className='itemnumber'>
                         <button className='minus' onClick={props.minus}> - </button>
-                        <button className='totitem'> {props.size} </button>
+                        <button className='totitem'> {props.quantity} </button>
                         <button className='plus' onClick={props.plus}> + </button>
                     </div>
                 </div>

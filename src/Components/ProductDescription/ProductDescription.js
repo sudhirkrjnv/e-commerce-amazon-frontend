@@ -16,10 +16,6 @@ function ProductDescription(){
         //console.log('addtocart is clicked')
         increment(itemdetails);
     }
-    const removeFromCart= function(){
-        //console.log('addtocart is clicked')
-        decrement(itemdetails);
-    }
 
     let { id } = useParams();
     console.log("id:"+id);

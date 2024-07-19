@@ -11,7 +11,8 @@ function Checkout(){
         let price = 0;
         for(let i=0;i<item.length;i++){
             const itemPrice = parseFloat(item[i].price.replace(/,/g, ""));
-            price += itemPrice;
+            //price += itemPrice;
+            price += itemPrice * item[i].quantity;
         }
         return price.toLocaleString();
     }
@@ -25,7 +26,7 @@ function Checkout(){
                 <div className='leftcontainer'>
                     {
                         item.map((value)=>(
-                            <Cartitems id={value.id} name={value.name} img={value.img} stars={value.stars} price={value.price} mrp={value.mrp} off={value.off} flatoff={value.flatoff} card={value.card} delivery={value.delivery} availibility={value.availibility} minus={decrement} plus={increment} size={size} />
+                            <Cartitems id={value.id} name={value.name} img={value.img} stars={value.stars} price={value.price} mrp={value.mrp} off={value.off} flatoff={value.flatoff} card={value.card} delivery={value.delivery} availibility={value.availibility} minus={()=>decrement(value)} plus={()=>increment(value)} quantity={value.quantity} />
                         ))
                     }
                     {/*<Cartitems/>
